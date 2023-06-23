@@ -16,7 +16,7 @@ class VerificadorAprovacaoTest {
         var numeroDeFaltas = 20;
         var media = 6.0;
 
-        var isApprovado = verificadorAprovacao.esseAluno_PaSsou(numeroDeFaltas, media);
+        var isApprovado = verificadorAprovacao.isAlunoAprovado(numeroDeFaltas, media);
 
         assertThat(isApprovado).isFalse();
     }
@@ -26,7 +26,7 @@ class VerificadorAprovacaoTest {
         var numeroDeFaltas = 4;
         var media = 3.0;
 
-        var isApprovado = verificadorAprovacao.esseAluno_PaSsou(numeroDeFaltas, media);
+        var isApprovado = verificadorAprovacao.isAlunoAprovado(numeroDeFaltas, media);
 
         assertThat(isApprovado).isFalse();
     }
@@ -36,7 +36,7 @@ class VerificadorAprovacaoTest {
         var numeroDeFaltas = 4;
         var media = 7;
 
-        var isApprovado = verificadorAprovacao.esseAluno_PaSsou(numeroDeFaltas, media);
+        var isApprovado = verificadorAprovacao.isAlunoAprovado(numeroDeFaltas, media);
 
         assertThat(isApprovado).isTrue();
     }
