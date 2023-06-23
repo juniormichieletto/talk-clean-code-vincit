@@ -13,13 +13,13 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Sugestao: Pensar como conseguir cobrir mais cenarios de test
  * sem escrever muitos outros tests que seriam bem parecidos
  */
-class CalculadoraMediaTest {
+class CalculadoraDeMediaDeAlunosTest {
 
-    private CalculadoraMedia calculadoraMedia;
+    private CalculadoraDeMediaDeAlunos calculadoraMedia;
 
     @BeforeEach
     void setUp() {
-        calculadoraMedia = new CalculadoraMedia();
+        calculadoraMedia = new CalculadoraDeMediaDeAlunos();
     }
 
     @Test
@@ -33,7 +33,7 @@ class CalculadoraMediaTest {
     }
 
     @Test
-    void calcularMediaDeveRetornar0QuandoAlunoPossuiNotaInvalida() {
+    void calcularMediaDeveRetornar0QuandoAlunoPossuiNotaInvalida()  {
         var mediaFinalEsperada = 0.0;
         var notasInvalidas = List.of(-1, 11, 5);
         var alunos = List.of(new Aluno(notasInvalidas));
@@ -44,7 +44,7 @@ class CalculadoraMediaTest {
     }
 
     @Test
-    void calcularMediaDeveCalcularApenasAlunosComNotasValidasQuandoPossuiAlunoComNotaInvalida() {
+    void calcularMediaDeveCalcularApenasAlunosComNotasValidasQuandoPossuiAlunoComNotaInvalida()  {
         var mediaFinalEsperada = 7.5;
         var notasInvalidas = List.of(-1, 10, 5);
         var notaAluno1 = List.of(10, 10, 10);
