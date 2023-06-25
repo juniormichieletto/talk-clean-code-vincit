@@ -23,4 +23,9 @@ Executando a classe principal (Main):
 ./mvnw compile exec:java
 ```
 
-Ps. Existem
+---
+Contribuidores:
+
+<a href = "https://github.com/Tanu-N-Prabhu/Python/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo=juniormichieletto/talk-clean-code-vincit"/>
+</a>
