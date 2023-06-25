@@ -6,30 +6,33 @@ public class CalculadoraDeMediaDeAlunos {
 
     public double calcularMedia(List<Aluno> list) {
         double somaDeNotas = 0;
-        int contador = 0;
-
+        int quantidadeDeNotas = 0;
         for (Aluno aluno : list) {
-            double nota = aluno.notas().get(contador);
+            for (int i = 0; i < aluno.notas().size(); i++) {
+                double nota = aluno.notas().get(i);
 
-            if(isNotaValida(nota)) {
+                if (isNotaInvalida(nota)) {
+                    System.out.println("Aluno " + aluno + " com Nota inválida");
+                    break;
+
+                }
                 somaDeNotas += nota;
-                contador++;
-            } else {
-                System.out.println("Nota inválida");
+                quantidadeDeNotas++;
             }
 
         }
-        return calculaMediaFinal(somaDeNotas, contador);
+        return Math.round(calculaMediaFinal(somaDeNotas, quantidadeDeNotas));
     }
 
-    private boolean isNotaValida(double nota) {
-        if(nota >= 0 && nota <= 10){
+    private boolean isNotaInvalida(double nota) {
+        if (!(nota >= 0 && nota <= 10)) {
             return true;
         }
         return false;
     }
-    private double calculaMediaFinal(double SomaDasNotas, double quantidadeDeNotas ) {
-        if(quantidadeDeNotas > 0) {
+
+    private double calculaMediaFinal(double SomaDasNotas, double quantidadeDeNotas) {
+        if (quantidadeDeNotas > 0) {
             return SomaDasNotas / quantidadeDeNotas;
         }
         return 0;

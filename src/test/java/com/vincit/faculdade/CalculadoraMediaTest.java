@@ -44,15 +44,17 @@ class CalculadoraDeMediaDeAlunosTest {
     }
 
     @Test
-    void calcularMediaDeveCalcularApenasAlunosComNotasValidasQuandoPossuiAlunoComNotaInvalida()  {
-        var mediaFinalEsperada = 7.5;
+    void calcularMediaDeveCalcularApenasAlunosComNotasValidasQuandoPossuiAlunoComNotaInvalida() {
+        var mediaFinalEsperada = 7;
         var notasInvalidas = List.of(-1, 10, 5);
         var notaAluno1 = List.of(10, 10, 10);
-        var notaAluno2 = List.of(5, 5, 5);
+        var notaAluno2 = List.of(10, 0, 5);
+        var notaAluno3 = List.of(4, 9, 5);
         var alunos = List.of(
                 new Aluno(notasInvalidas),
                 new Aluno(notaAluno1),
-                new Aluno(notaAluno2)
+                new Aluno(notaAluno2),
+                new Aluno(notaAluno3)
         );
 
         var mediaFinalDosAlunos = calculadoraMedia.calcularMedia(alunos);
