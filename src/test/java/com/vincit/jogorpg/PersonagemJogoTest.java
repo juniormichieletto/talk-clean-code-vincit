@@ -8,11 +8,11 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Exemplo simples de teste unitario para a classe
  * Duvida: Será um teste Unitario ou integrado?
  */
-class Personagem_Do_JogoTest {
+class PersonagemJogoTest {
 
     @Test
     void naoDeveRealizarAtaqueQuandoPersonagemEstaMorto() {
-        var personagem = new Personagem_Do_Jogo(0, 10, 10, 10);
+        var personagem = new PersonagemJogo(0, 10, 10, 10);
         var vidaEsperadaDoMonstroDepoisDoAtaque = 10;
         var monstro = new Monstro();
 
@@ -24,7 +24,7 @@ class Personagem_Do_JogoTest {
 
     @Test
     void naoDeveRealizarAtaqueQuandoEnergiaEhMenorQue50() {
-        var personagem = new Personagem_Do_Jogo(10, 49, 10, 10);
+        var personagem = new PersonagemJogo(10, 49, 10, 10);
         var vidaEsperadaDoMonstroDepoisDoAtaque = 10;
         var monstro = new Monstro();
 
@@ -36,7 +36,7 @@ class Personagem_Do_JogoTest {
 
     @Test
     void naoDeveRealizarAtaqueQuandoNivelInsuficiente() {
-        var personagem = new Personagem_Do_Jogo(10, 60, 0, 90);
+        var personagem = new PersonagemJogo(10, 60, 0, 90);
         var vidaEsperadaDoMonstroDepoisDoAtaque = 10;
         var monstro = new Monstro();
 
@@ -48,7 +48,7 @@ class Personagem_Do_JogoTest {
 
     @Test
     void naoDeveRealizarAtaqueQuandoPoderEhMenorQue80() {
-        var personagem = new Personagem_Do_Jogo(10, 60, 10, 77);
+        var personagem = new PersonagemJogo(10, 60, 10, 77);
         var vidaEsperadaDoMonstroDepoisDoAtaque = 10;
         var monstro = new Monstro();
 
@@ -60,7 +60,7 @@ class Personagem_Do_JogoTest {
 
     @Test
     void deveRealizarAtaqueComSucesso() {
-        var personagem = new Personagem_Do_Jogo(10, 60, 15, 90);
+        var personagem = new PersonagemJogo(10, 60, 15, 90);
         var vidaEsperadaDoMonstroDepoisDoAtaque = 9;
         var monstro = new Monstro();
 
