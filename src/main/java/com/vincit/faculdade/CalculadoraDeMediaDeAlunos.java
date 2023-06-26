@@ -25,15 +25,15 @@ public class CalculadoraDeMediaDeAlunos {
     }
 
     private boolean isNotaInvalida(double nota) {
-        if (!(nota >= 0 && nota <= 10)) {
+        if (nota < 0 || nota > 10) {
             return true;
         }
         return false;
     }
 
-    private double calculaMediaFinal(double SomaDasNotas, double quantidadeDeNotas) {
+    private double calculaMediaFinal(double somaDasNotas, double quantidadeDeNotas) {
         if (quantidadeDeNotas > 0) {
-            return SomaDasNotas / quantidadeDeNotas;
+            return somaDasNotas / quantidadeDeNotas;
         }
         return 0;
     }
