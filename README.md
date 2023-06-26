@@ -27,4 +27,5 @@ Executando a classe principal (Main):
 Contribuições:
 
 [PR do Pessoal ao vivo :)](https://github.com/juniormichieletto/talk-clean-code-vincit/pull/1)
+
 [PR do RuanCostaDev](https://github.com/juniormichieletto/talk-clean-code-vincit/pull/2) 
